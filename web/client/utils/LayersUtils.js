@@ -366,6 +366,7 @@ const LayersUtils = {
             handleClickOnLayer: layer.handleClickOnLayer || false,
             featureInfo: layer.featureInfo,
             catalogURL: layer.catalogURL,
+            origin: layer.origin,
             ...assign({}, layer.params ? {params: layer.params} : {})
         };
     },
