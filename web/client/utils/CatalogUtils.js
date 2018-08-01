@@ -146,7 +146,7 @@ const converters = {
                 }, dim.$ || {})),
                 references: [{
                     type: "OGC:WMS",
-                    url: options.url,
+                    url: record.onlineResource && record.onlineResource["ns0:href"] || options.url,
                     SRS: (record.SRS && (isArray(record.SRS) ? record.SRS : [record.SRS])) || [],
                     params: {
                         name: record.Name
