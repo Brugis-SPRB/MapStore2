@@ -99,7 +99,7 @@ module.exports = {
             }),
     startFeatureExportDownload: (action$, store) =>
         action$.ofType(DOWNLOAD_FEATURES).switchMap(action => {
-            const {virtualScroll= false} = (store.getState()).featuregrid;
+            const virtualScroll = store.getState().featuregrid ? true : false;
             return getWFSFeature({
                     url: action.url,
                     downloadOptions: action.downloadOptions,
